@@ -6,7 +6,14 @@
     <% end %>
   </div>
 
-  <%= f = form_for :chat, "#", id: "chat-form", phx_submit: :submit_message, phx_change: :form_update %>
-    <%= text_input f, :message, value: @message, placeholder: "Please enter your message ..." %>
-  </form>
+  <div id="user-list">
+    <h3>Users online</h3>
+    <p>user 1</p>
+    <p>user 2</p>
+    <p>user 3</p>
+  </div>
+
 </div>
+<%= f = form_for :chat, "#", id: "chat-form", phx_submit: :submit_message, phx_change: :form_update %>
+  <%= text_input f, :message, value: @message, placeholder: "Please enter your message ..." %>
+</form>
